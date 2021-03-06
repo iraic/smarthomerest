@@ -1,4 +1,8 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Authorization, Access-Control-Allow-Methods, Access-Control-Allow-Headers, Allow, Access-Control-Allow-Origin");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, HEAD");
+header("Allow: GET, POST, PUT, DELETE, OPTIONS, HEAD");
 require_once "conexion.php";
 require_once "jwt.php";
 
