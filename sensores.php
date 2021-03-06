@@ -14,7 +14,7 @@ if(JWT::verify($jwt,"qwertyuiop")!=0){
     header("HTT/1.1 401 Unauthorized");
     exit();
 }
-$data = JWT::get_data($jwt,"qwertyuiop");
+$data = JWT::get_data($jwt, Config::SECRET);
 
 $metodo = $_SERVER["REQUEST_METHOD"];
 

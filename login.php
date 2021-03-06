@@ -16,7 +16,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
         $s->setFetchMode(PDO::FETCH_ASSOC);
         $r = $s->fetch();
         if($r){
-            $jwt = JWT::create(array("user"=>$_GET['user']),"qwertyuiop");
+            $jwt = JWT::create(array("user"=>$_GET['user']),Config::SECRET);
             $r = array("login"=>"y", "token"=>$jwt);
         }else{
             $r = array("login"=>"n", "token"=>"Error de usuario/contraseña");
